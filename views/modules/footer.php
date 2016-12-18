@@ -2,13 +2,8 @@
 		<div class="container">
 				<div class="col-md-2 re-ft-grd">
 						<h3>Categories</h3>
-						<ul class="categories">
-								<li><a href="#">Men</a></li>
-								<li><a href="#">Women</a></li>
-								<li><a href="#">Kids</a></li>
-								<li><a href="#">Formal</a></li>
-								<li><a href="#">Casuals</a></li>
-								<li><a href="#">Sports</a></li>
+						<ul class="categories content-top2">
+								
 						</ul>
 				</div>
 				<div class="col-md-2 re-ft-grd">
@@ -45,3 +40,16 @@
 				</div>
 		</div>
 </div>
+<script>
+    $.ajax({
+      url:"<?php print(URL);?>Productos/allCategorys",
+      type: "GET"
+      }).done(function(r){
+        console.log(r);
+        r.map(function(n){
+          $(".content-top2").append(
+            '<li><a href="<?php print(URL);?>Productos/products">'+n.nombre+'</a></li>');
+            console.log(n);
+        });
+      });
+  </script>

@@ -37,15 +37,10 @@
 								<div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
 										<ul class="nav navbar-nav nav-font">
 												<li class="dropdown">
-														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
-														<ul class="dropdown-menu">
-																<li><a href="products.html">Shoes</a></li>
-																<li><a href="products.html">Tees</a></li>
-																<li><a href="products.html">Tops</a></li>
-																<li class="divider"></li>
-																<li><a href="products.html">Tracks</a></li>
-																<li class="divider"></li>
-																<li><a href="products.html">Gear</a></li>
+														<a href="<?php print(URL);?>Productos/products/" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
+														<ul class="dropdown-menu content-top1">
+																
+																
 														</ul>
 												</li>
 
@@ -65,3 +60,16 @@
 						<!--header-bottom-->
 		</div>
 </div>
+<script>
+    $.ajax({
+      url:"<?php print(URL);?>Productos/allCategorys",
+      type: "GET"
+      }).done(function(r){
+        console.log(r);
+        r.map(function(n){
+          $(".content-top1").append(
+            '<li><a href="<?php print(URL);?>Productos/products/'+n.idCategorias+'">'+n.nombre+'</a></li>');
+            console.log(n);
+        });
+      });
+  </script>

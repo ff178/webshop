@@ -1,6 +1,6 @@
 <?php
 
-    define('URL', 'http://localhost/trabajos/webshop/');
+    define('URL', 'http://localhost/works/webshop/');
     define('LIBS','libs/');
     define('MODELS','./models/');
     define('BL','./business_logic/');
@@ -11,7 +11,7 @@
     define('_DB_HOST' , 'localhost');
     define('_DB_USER' , 'root' );
     define('_DB_PASS' , '' );
-    define('_DB_NAME' , 'figuraSana');
+    define('_DB_NAME' , 'figurasana');
 
     define('HASH_ALGO' , 'sha512');
     define('HASH_KEY' , 'my_key');
