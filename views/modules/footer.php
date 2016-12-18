@@ -15,7 +15,6 @@
 						<h3>Short links</h3>
 						<ul class="shot-links">
 								<li><a href="#">Contact us</a></li>
-								<li><a href="#">Support</a></li>
 								<li><a href="#">Delivery</a></li>
 								<li><a href="#">Return Policy</a></li>
 								<li><a href="#">Terms & conditions</a></li>

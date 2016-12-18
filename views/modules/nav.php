@@ -8,7 +8,7 @@
 								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signUp" role="button">Sign up</a>
 								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signIn" role="button">Login</a>
 								<div class="cart box_1">
-										<a href="checkout.html">
+										<a href="<?php print(URL); ?>Usuario/checkout">
 										<h3>
 												<div class="total">
 <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>

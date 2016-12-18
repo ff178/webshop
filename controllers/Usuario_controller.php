@@ -29,4 +29,7 @@ class Usuario_controller extends Controller{
         $this -> view -> render($this, 'contact', 'Contacto Figura Sana');
     }
 
+    public function checkout(){
+        $this -> view -> render($this, 'checkout', 'Ultimos Pasos');
+    }
 }
