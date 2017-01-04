@@ -79,7 +79,7 @@ CREATE  TABLE IF NOT EXISTS `figuraSana`.`Productos` (
   `descripcion` VARCHAR(500) NOT NULL ,
   `precio` DOUBLE NOT NULL ,
   `url` VARCHAR(345) NOT NULL ,
-  `url2` VARCHAR(45) NOT NULL ,
+  `url2` VARCHAR(45) NULL ,
   `idCategorias` INT NOT NULL ,
   PRIMARY KEY (`idProductos`, `codigo`) ,
   INDEX `fk_Productos_Categorias1_idx` (`idCategorias` ASC) ,
