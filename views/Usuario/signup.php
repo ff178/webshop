@@ -19,12 +19,12 @@
                              <div class="strip"></div>
                              <p>Welcome, please enter the following to continue.</p>
                              <p>If you have previously Login with us, <a href="#">Click Here</a></p>
-                             <form>
-                                 <h5>User Name:</h5>
-                                 <input type="text" value="">
+                             <form class="loginCon" method="POST">
+                                 <h5>Email:</h5>
+                                 <input name="email" type="text" value="">
                                  <h5>Password:</h5>
-                                 <input type="password" value=""><br>
-                                 <input type="submit" value="Login">
+                                 <input name="pass" type="password" value=""><br>
+                                 <input id="login" type="submit" value="Login">
 
                              </form>
                             <a href="#">Forgot Password ?</a>
@@ -42,3 +42,51 @@
           <?php include MODULE."footer.php"; ?>
     </body>
 </html>
+<script>
+$(".loginCon").submit(function(e){
+  e.preventDefault();
+
+  var form = $(this)[0];
+  var data = {}
+
+
+
+  var email = form.querySelector("[name=email]").value;
+  var pass = form.querySelector("[name=pass]").value;
+
+  var data = processForm(form);
+    console.log(data);
+    $.ajax({
+          url:"<?php print(URL);?>Usuario/singIn",
+          method:"POST",
+          data: data
+        }).done(function(r){
+          console.log(r);
+
+        });
+
+
+  return false;
+
+});
+
+
+
+function processForm(form){
+  var inputs = form.querySelectorAll("input");
+  var data = {};
+  $(inputs).each(function(){
+    var input = $(this);
+    if(input.context.type != "submit"){
+      var attr = input.context.name;
+      data[attr] = input.context.value;
+    }
+  });
+  return data;
+}
+
+$( "#login" ).click(function() {
+  document.location.href = document.location.href;
+});
+
+</script>

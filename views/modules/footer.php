@@ -3,7 +3,7 @@
 				<div class="col-md-2 re-ft-grd">
 						<h3>Categories</h3>
 						<ul class="categories content-top2">
-								
+
 						</ul>
 				</div>
 				<div class="col-md-2 re-ft-grd">
@@ -45,11 +45,11 @@
       url:"<?php print(URL);?>Productos/allCategorys",
       type: "GET"
       }).done(function(r){
-        console.log(r);
+        //console.log(r);
         r.map(function(n){
           $(".content-top2").append(
             '<li><a href="<?php print(URL);?>Productos/products">'+n.nombre+'</a></li>');
-            console.log(n);
+            //console.log(n);
         });
       });
   </script>

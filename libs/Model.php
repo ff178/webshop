@@ -68,7 +68,7 @@ class Model {
         
         if($result === true){
             $response = array('error'=>0,'getID'=> self::$db->lastInsertId(),'msg'=>  get_class($this).' Created');
-            $this->setIdUsers( $response["getID"] ) ;
+            $this->setIdUsuario( $response["getID"] ) ;
         }else{
             $response = array('error'=>1,'msg'=> 'Error '.$result);
         }

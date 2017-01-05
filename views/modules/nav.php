@@ -5,13 +5,20 @@
 									<a href="<?php print(URL); ?>">Figura Sana</a>
 						</div>
 						<div class="login-bars">
+
+							<?php if(Session::get("usuario")){
+
+							echo "Hola, ".Session::get("usuario");
+							echo '<a id="logout" class="btn btn-default log-bar" role="button">Logout</a>';
+								}else{ ?>
 								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signUp" role="button">Sign up</a>
 								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signIn" role="button">Login</a>
+								<?php } ?>
 								<div class="cart box_1">
 										<a href="<?php print(URL); ?>Usuario/checkout">
 										<h3>
 												<div class="total">
-<span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
+ 												<span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
 										</a>
 										<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 										<div class="clearfix"> </div>
@@ -39,8 +46,8 @@
 												<li class="dropdown">
 														<a href="<?php print(URL);?>Productos/products/" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
 														<ul class="dropdown-menu content-top1">
-																
-																
+
+
 														</ul>
 												</li>
 
@@ -61,15 +68,23 @@
 		</div>
 </div>
 <script>
+$( "#logout" ).click(function() {
+	$.ajax({
+		url:"<?php print(URL);?>Usuario/salir",
+		type: "GET"
+		}).done(function(r){
+			document.location.href = document.location.href;
+		});
+});
     $.ajax({
       url:"<?php print(URL);?>Productos/allCategorys",
       type: "GET"
       }).done(function(r){
-        console.log(r);
+        //console.log(r);
         r.map(function(n){
           $(".content-top1").append(
             '<li><a href="<?php print(URL);?>Productos/products/'+n.idCategorias+'">'+n.nombre+'</a></li>');
-            console.log(n);
+            //console.log(n);
         });
       });
   </script>
