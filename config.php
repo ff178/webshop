@@ -1,6 +1,6 @@
 <?php
 
-    define('URL', 'http://localhost/trabajos/webshop/');
+    define('URL', 'http://localhost/works/webshop/');
     define('LIBS','libs/');
     define('MODELS','./models/');
     define('BL','./business_logic/');
