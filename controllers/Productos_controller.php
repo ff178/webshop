@@ -10,6 +10,10 @@ class Productos_controller extends Controller{
         $this -> view -> render($this, 'products', 'Nuestros Productos');
     }
 
+    public function productsByCat(){
+        $this -> view -> render($this, 'categorys', 'Nuestros Productos');
+    }
+
     public function single(){
         $this -> view -> render($this, 'single', 'Articulo');
     }
@@ -34,9 +38,16 @@ class Productos_controller extends Controller{
     public function productByCategory($id){
     	$r = Producto_bl::getProductByCategory($id);
         $json = json_encode($r);
-        print_r($json);
         header("Content-type: application/json;charset=utf-8");
+        print_r($json);
+
         return $json;
+    }
+
+    public function singleProduct($idProductos){
+        $product = Productos::where("idProductos", $idProductos);
+        header("Content-type: application/json;charset=utf-8");
+        echo json_encode($product);
     }
 
 }

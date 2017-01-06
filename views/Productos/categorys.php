@@ -12,7 +12,7 @@
         </div>
         <div class="products-gallery">
            <div class="container">
-               <div class="content-top3 col-md-9 grid-gallery">
+               <div class="content-top4 col-md-9 grid-gallery">
 
 
 
@@ -81,17 +81,24 @@
         <?php include MODULE."footer.php"; ?>
     </body>
 </html>
+
+<?php
+	$url = $_GET["url"];
+	$url = explode("/", $url);
+	$params = ( isset($url[2]) && $url[2] != null ) ? $url[2] : null;
+?>
+
 <script>
-$.ajax({
-url:"<?php print(URL);?>Productos/allProducts",
-type: "GET"
-}).done(function(r){
-  //console.log(r);
-  r.map(function(n){
-    $(".content-top3").append(
-      '<div class="col-md-4 grid-stn simpleCart_shelfItem"><div class="ih-item square effect3 bottom_to_top"><div class="bottom-2-top"><div  class="img"><img style="height: 400px;" src="<?php print(URL);?>'+n.url+'" alt="/" class="img-responsive gri-wid"></div><div class="info"><div class="pull-left styl-hdn"><h3 style="font-size: 100%;" >'+n.nombre+'</h3></div><div class="pull-right styl-price"><p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$'+n.precio+'</span></a></p></div><div class="clearfix"></div></div></div></div>  <div class="quick-view"><a href="<?php print(URL);?>Productos/single/'+n.idProductos+'">Quick view</a></div></div>');
-      //console.log(n);
-  });
-});
+	$.ajax({
+		url:"<?php print(URL);?>Productos/productByCategory/<?php echo $params; ?>",
+		type: "GET"
+		}).done(function(r){
+			r.map(function(n){
+				$(".content-top4").append(
+					'<div class="col-md-4 grid-stn simpleCart_shelfItem"><div class="ih-item square effect3 bottom_to_top"><div class="bottom-2-top"><div  class="img"><img style="height: 400px;" src="<?php print(URL);?>'+n.url+'" alt="/" class="img-responsive gri-wid"></div><div class="info"><div class="pull-left styl-hdn"><h3 style="font-size: 100%;" >'+n.nombre+'</h3></div><div class="pull-right styl-price"><p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$'+n.precio+'</span></a></p></div><div class="clearfix"></div></div></div></div>  <div class="quick-view"><a href="<?php print(URL);?>Productos/single/'+n.idProductos+'">Quick view</a></div></div>');
+				console.log(n);
+
+				});
+		});
 
 </script>

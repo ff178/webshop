@@ -43,8 +43,9 @@
 
 								<div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
 										<ul class="nav navbar-nav nav-font">
+												<li><a href="<?php print(URL); ?>Productos/products">Productos</a></li>
 												<li class="dropdown">
-														<a href="<?php print(URL);?>Productos/products/" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
+														<a href="<?php print(URL);?>Productos/productByCat" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
 														<ul class="dropdown-menu content-top1">
 
 
@@ -83,7 +84,7 @@ $( "#logout" ).click(function() {
         //console.log(r);
         r.map(function(n){
           $(".content-top1").append(
-            '<li><a href="<?php print(URL);?>Productos/products/'+n.idCategorias+'">'+n.nombre+'</a></li>');
+            '<li><a href="<?php print(URL);?>Productos/productsByCat/'+n.idCategorias+'">'+n.nombre+'</a></li>');
             //console.log(n);
         });
       });
