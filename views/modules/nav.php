@@ -11,8 +11,8 @@
 							echo "Hola, ".Session::get("usuario");
 							echo '<a id="logout" class="btn btn-default log-bar" role="button">Logout</a>';
 								}else{ ?>
-								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signUp" role="button">Sign up</a>
-								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signIn" role="button">Login</a>
+								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signUp" role="button">Registrarme</a>
+								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signIn" role="button">Entrar</a>
 								<?php } ?>
 								<div class="cart box_1">
 										<a href="<?php print(URL); ?>Usuario/checkout">
@@ -20,7 +20,7 @@
 												<div class="total">
  												<span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
 										</a>
-										<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+										<p><a href="javascript:;" class="simpleCart_empty">Vaciar Carrito</a></p>
 										<div class="clearfix"> </div>
 								</div>
 						</div>
@@ -45,7 +45,7 @@
 										<ul class="nav navbar-nav nav-font">
 												<li><a href="<?php print(URL); ?>Productos/products">Productos</a></li>
 												<li class="dropdown">
-														<a href="<?php print(URL);?>Productos/productByCat" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
+														<a href="<?php print(URL);?>Productos/productByCat" class="dropdown-toggle" data-toggle="dropdown">Categorias<b class="caret"></b></a>
 														<ul class="dropdown-menu content-top1">
 
 
