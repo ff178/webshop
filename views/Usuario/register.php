@@ -4,9 +4,9 @@
         <div class="head-bread">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="<?php print(URL); ?>">Home</a></li>
-                    <li><a href="register.html">LOGIN</a></li>
-                    <li class="active">REGISTER</li>
+                    <li><a href="<?php print(URL); ?>">Inicio</a></li>
+                    <li><a href="<?php print(URL); ?>Usuario/signIn">Entrar</a></li>
+                    <li class="active">Registro</li>
                 </ol>
             </div>
         </div>
@@ -14,12 +14,12 @@
 	<div class="reg-form">
 		<div class="container">
 			<div class="reg">
-				<h3>Register Now</h3>
-				<p>Welcome, please enter the following details to continue.</p>
-				<p>If you have previously registered with us, <a href="#">click here</a></p>
+				<h3>Registrate</h3>
+				<p>Bienvenido, ingrese los siguientes detalles para continuar.</p>
+				<p>Si ya te has registrado antes,<a href="<?php print(URL); ?>Usuario/signIn">click aqui</a></p>
 				 <form class="regisCon" method="POST">
 					<ul>
-						<li class="text-info">Username: </li>
+						<li class="text-info">Nombre de usuario: </li>
 						<li><input name="usuario" type="text" value="" required=" "></li>
 					</ul>
 					<ul>
@@ -27,11 +27,10 @@
 						<li><input name="email" type="email" value="" required=" "></li>
 					</ul>
 					<ul>
-						<li class="text-info">Password: </li>
+						<li class="text-info">contrasena: </li>
 						<li><input name="pass" type="password" value="" required=" "></li>
 					</ul>
-					<input id="regis" name="" type="submit" value="Register Now">
-					<p class="click">By clicking this button, you are agree to my  <a href="#">Policy Terms and Conditions.</a></p>
+					<input id="regis" name="" type="submit" value="Registrate Ahora">
 				</form>
 			</div>
 		</div>

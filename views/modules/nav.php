@@ -9,7 +9,7 @@
 							<?php if(Session::get("usuario")){
 
 							echo "Hola, ".Session::get("usuario");
-							echo '<a id="logout" class="btn btn-default log-bar" role="button">Logout</a>';
+							echo '<a id="logout" class="btn btn-default log-bar" role="button">Salir</a>';
 								}else{ ?>
 								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signUp" role="button">Registrarme</a>
 								<a class="btn btn-default log-bar" href="<?php print(URL); ?>Usuario/signIn" role="button">Entrar</a>

@@ -4,25 +4,25 @@
         <div class="head-bread">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="<?php print(URL); ?>">Home</a></li>
-                    <li class="active">Contact</li>
+                    <li><a href="<?php print(URL); ?>">Inicio</a></li>
+                    <li class="active">Contacto</li>
                 </ol>
             </div>
         </div>
         <!-- contact -->
         <div class="contact">
             <div class="container">
-                <h3>Catch us</h3>
+                <h3>Contactanos</h3>
                 <div class="contact-content">
                     <form>
-                        <input type="text" class="textbox" value=" Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}"><br>
-                        <input type="text" class="textbox" value="Your E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-Mail';}"><br>
+                        <input type="text" class="textbox" value=" Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}"><br>
+                        <input type="text" class="textbox" value="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-Mail';}"><br>
                             <div class="clear"> </div>
                         <div>
-                            <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Message ';}">Your Message</textarea><br>
+                            <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Message ';}">Mensaje</textarea><br>
                         </div>
                        <div class="submit">
-                            <input class="btn btn-default cont-btn" type="submit" value="SEND " />
+                            <input class="btn btn-default cont-btn" type="submit" value="Enviar " />
                       </div>
                     </form>
                     <div class="map">

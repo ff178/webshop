@@ -1,9 +1,8 @@
 <div class="footer-grid">
 		<div class="container">
 				<div class="col-md-2 re-ft-grd">
-						<h3>Categories</h3>
+						<h3>Categorias</h3>
 						<ul class="categories content-top2">
-
 						</ul>
 				</div>
 				<div class="col-md-6 re-ft-grd">

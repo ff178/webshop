@@ -4,8 +4,8 @@
         <div class="head-bread">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="<?php print(URL); ?>">HOME</a></li>
-                    <li class="active">LOGIN</li>
+                    <li><a href="<?php print(URL); ?>">Inicio</a></li>
+                    <li class="active">Entrar</li>
                 </ol>
             </div>
         </div>
@@ -17,23 +17,21 @@
                     <div class="col-md-6 log">
                              <h3>Login</h3>
                              <div class="strip"></div>
-                             <p>Welcome, please enter the following to continue.</p>
-                             <p>If you have previously Login with us, <a href="#">Click Here</a></p>
+                             <p>Bienvenido, ingrese los siguientes detalles para continuar.</p>
                              <form class="loginCon" method="POST">
                                  <h5>Email:</h5>
                                  <input name="email" type="text" value="">
-                                 <h5>Password:</h5>
+                                 <h5>Contrasena:</h5>
                                  <input name="pass" type="password" value=""><br>
-                                 <input id="login" type="submit" value="Login">
+                                 <input id="login" type="submit" value="Entrar">
 
                              </form>
-                            <a href="#">Forgot Password ?</a>
                     </div>
                     <div class="col-md-6 login-right">
-                            <h3>New Registration</h3>
+                            <h3>Nuevo Registro</h3>
                             <div class="strip"></div>
-                            <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-                            <a href="register.html" class="button">Create An Account</a>
+                            <p>Al crear una cuenta en nuestra tienda, podra desplazarse mas rapidamente por el proceso de pago.</p>
+                            <a href="register.html" class="button">Crear Cuenta</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>

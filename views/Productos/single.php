@@ -5,9 +5,8 @@
         <div class="head-bread">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li class="active">Shop</li>
+                    <li><a href="<?php print(URL); ?>">Inicio</a></li>
+                    <li class="active">Tienda</li>
                 </ol>
             </div>
         </div>
