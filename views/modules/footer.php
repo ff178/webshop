@@ -9,8 +9,7 @@
 						<h3>Social</h3>
 						<ul class="social">
 								<li><a href="#" class="fb">facebook</a></li>
-								<li><a href="#" class="twt">twitter</a></li>
-								<li><a href="#" class="gpls">g+ plus</a></li>
+								<li><a href="https://www.instagram.com/figurasana_/" class="gpls">instagram</a></li>
 								<div class="clearfix"></div>
 						</ul>
 				</div>

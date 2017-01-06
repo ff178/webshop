@@ -21,6 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 <link href="<?php print(URL); ?>public/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<!--coustom css-->
 			<link href="<?php print(URL); ?>public/css/style.css" rel="stylesheet" type="text/css"/>
+      <link rel="stylesheet" href="<?php print(URL); ?>public/css/styleEmail.css">
         <!--shop-kart-js-->
         <script src="<?php print(URL); ?>public/js/simpleCart.min.js"></script>
 		<!--default-js-->
@@ -28,4 +29,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--bootstrap-js-->
 			<script src="<?php print(URL); ?>public/js/bootstrap.min.js"></script>
 		<!--script-->
+    <script src="<?php print(URL); ?>public/js/app.js"></script>
     </head>
