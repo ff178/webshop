@@ -21,6 +21,16 @@ class Productos_controller extends Controller{
         header("Content-type: application/json;charset=utf-8");
         return $json;
     }
+
+    public function allProducts(){
+    	  $r = Producto_bl::getAllProducts();
+        $json = json_encode($r);
+        header("Content-type: application/json;charset=utf-8");
+        print_r($json);
+
+        return $json;
+    }
+
     public function productByCategory($id){
     	$r = Producto_bl::getProductByCategory($id);
         $json = json_encode($r);

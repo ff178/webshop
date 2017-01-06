@@ -19,7 +19,8 @@ class Carrito extends Model {
     private $idCarrito;
     private $cantidad;
     private $fecha;
-   
+    private $precioT;
+
      private $has_one = array(
         'Usuario' => array(
             'class' => 'Usuario',
@@ -28,7 +29,7 @@ class Carrito extends Model {
             'join_table' => 'Carrito'
         )
     );
-     
+
      private $has_many = array(
         'Items' => array(
             'class' => 'Items',
@@ -39,7 +40,7 @@ class Carrito extends Model {
             'join_table' => 'Items'
         )
     );
-    
+
     public function getMyVars() {
         return get_object_vars($this);
     }
@@ -49,7 +50,7 @@ class Carrito extends Model {
         $this->cantidad = $cantidad;
         $this->fecha = $fecha;
     }
-    
+
     function getIdUsuario() {
         return $this->idUsuario;
     }
@@ -98,7 +99,13 @@ class Carrito extends Model {
         $this->has_many = $has_many;
     }
 
+    function getPrecioT() {
+        return $this->precioT;
+    }
+
+    function setPrecioT($precioT) {
+        $this->precioT = $precioT;
+    }
 
 
-    
 }

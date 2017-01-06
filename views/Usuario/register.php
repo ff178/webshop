@@ -24,7 +24,7 @@
 					</ul>
 					<ul>
 						<li class="text-info">Email: </li>
-						<li><input name="email" type="text" value="" required=" "></li>
+						<li><input name="email" type="email" value="" required=" "></li>
 					</ul>
 					<ul>
 						<li class="text-info">Password: </li>

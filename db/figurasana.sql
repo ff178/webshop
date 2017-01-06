@@ -47,6 +47,7 @@ CREATE  TABLE IF NOT EXISTS `figuraSana`.`Carrito` (
   `idCarrito` INT NOT NULL AUTO_INCREMENT ,
   `cantidad` INT NOT NULL ,
   `fecha` DATE NOT NULL ,
+  `precioT` DOUBLE NOT NULL ,
   PRIMARY KEY (`idCarrito`, `idUsuario`) ,
   CONSTRAINT `fk_Carrito_Consumidor1`
     FOREIGN KEY (`idUsuario` )
